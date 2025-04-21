@@ -9,9 +9,11 @@ interface CGProps{
 export default function CourseGoal({title,children,id,handledltGoal}:CGProps) {
   return (
     <article>
-      <h1>{title}</h1>
-      <h2>{children}</h2>
-      <p onClick={()=>handledltGoal(id)}>Delete</p>
+      <div>
+        <h1>{title}</h1>
+        <h2>{children}</h2>
+      </div>
+      <p onClick={() => handledltGoal(id)}>Delete</p>
     </article>
   );
 }
