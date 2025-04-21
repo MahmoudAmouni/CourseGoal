@@ -8,7 +8,7 @@ interface CGLPorps{
 }
 export default function CourseGoalList({goals,handledltGoal}:CGLPorps) {
   if(goals.length == 0)return <InfoBox mode="hint" >
-    You have no course goals.Start adding some!!📰
+    You have no course goals.Start adding some!📰
   </InfoBox>
 
   let warningBox: ReactNode;
