@@ -1,8 +1,10 @@
 import { CourseGoalsType } from "../App";
+import CourseGoal from "./CourseGoal";
 interface CGLPorps{
-    goals:CourseGoalsType,
+    goals:CourseGoalsType[],
+    handledltGoal:(id:number)=>void
 }
-export default function CourseGoalList({goals}:) {
+export default function CourseGoalList({goals,handledltGoal}:CGLPorps) {
   return (
     <ul>
         {goals.map((goal) => (
