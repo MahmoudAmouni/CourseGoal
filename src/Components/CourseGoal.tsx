@@ -13,7 +13,7 @@ export default function CourseGoal({title,children,id,handledltGoal}:CGProps) {
         <h1>{title}</h1>
         <h2>{children}</h2>
       </div>
-      <p onClick={() => handledltGoal(id)}>Delete</p>
+      <button onClick={() => handledltGoal(id)}>Delete</button>
     </article>
   );
 }
