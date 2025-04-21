@@ -7,9 +7,9 @@ interface HProps{
 export default function Header({img,children}:HProps) {
     const {src,alt} = img;
   return (
-    <div>
-    <img src={src} alt={alt}/>
-    {children}
-    </div>
-  )
+    <header>
+      <img src={src} alt={alt} />
+      {children}
+    </header>
+  );
 }

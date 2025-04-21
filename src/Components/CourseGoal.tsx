@@ -7,8 +7,8 @@ interface CGProps{
 export default function CourseGoal({title,children}:CGProps) {
   return (
     <article>
-        <h1>{title}</h1>
-        <p>{children}</p>
+      <h1>{title}</h1>
+      <p>{children}</p>
     </article>
-  )
+  );
 }
