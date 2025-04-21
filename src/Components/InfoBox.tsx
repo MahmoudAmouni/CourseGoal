@@ -13,7 +13,7 @@ export default function InfoBox({children,mode}:IBProps) {
         );
     }
     return (
-      <aside className="infobox infobox-warning">
+      <aside className="infobox infobox-warning warning--medium">
         <h2>Warning</h2>
         <p>{children}</p>
       </aside>
