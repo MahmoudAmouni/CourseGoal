@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Header from "./Components/Header";
-import imgsrc from "./assets/goals.jpg"
+import imgsrc from "./assets/icon.jpg"
 import CourseGoalList from "./Components/CourseGoalList";
 import NewGoal from "./Components/NewGoal";
 

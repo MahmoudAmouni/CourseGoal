@@ -8,7 +8,12 @@ export default function NewGoal({handleNewGoal}:NGProps) {
     const summary = useRef<HTMLInputElement>(null);
     function handleSubmit(e:FormEvent<HTMLFormElement>){
         e.preventDefault();
-        const enteredGoal = goal.current!.value;
+        if (
+          goal.current!.value.trim() == "" ||
+          summary.current!.value.trim() == ""
+        )
+          return;
+          const enteredGoal = goal.current!.value;
         const enteredSummary = summary.current!.value;
 
         e.currentTarget.reset()
@@ -19,12 +24,12 @@ export default function NewGoal({handleNewGoal}:NGProps) {
     <form onSubmit={handleSubmit}>
       <p>
         <label htmlFor="goal">Your goal</label>
-        <input id="goal" type="text" ref={goal} />
+        <input id="goal" type="text" ref={goal} required/>
       </p>
 
       <p>
         <label htmlFor="summary">Short summary</label>
-        <input id="summary" type="text" ref={summary} />
+        <input id="summary" type="text" ref={summary} required />
       </p>
       <button type="submit">Add Goal</button>
     </form>
