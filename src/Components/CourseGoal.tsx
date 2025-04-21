@@ -7,6 +7,7 @@ interface CGProps{
     handledltGoal:(id:number)=> void
 }
 export default function CourseGoal({title,children,id,handledltGoal}:CGProps) {
+  
   return (
     <article>
       <div>
