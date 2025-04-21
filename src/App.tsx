@@ -13,11 +13,11 @@ export default function App() {
   
   const [goals, setGoals] = useState<CourseGoalsType[]>([]);
 
-  function handleAddGoal(){
+  function handleAddGoal(title:string,description:string){
     setGoals((goals)=>{
       const newGoal: CourseGoalsType={
-        title:"new Goal",
-        description:"goal description",
+        title,
+        description,
         id:Math.random()
       }
       return [...goals,newGoal]
@@ -33,7 +33,7 @@ export default function App() {
       <Header img={{ src: imgsrc, alt: "img alt" }}>
         <h1>Your Course Goal</h1>
       </Header>
-      <NewGoal />
+      <NewGoal handleNewGoal={handleAddGoal}/>
       <CourseGoalList goals={goals} handledltGoal={handledltGoal} />
     </main>
   );
